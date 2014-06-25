@@ -3,7 +3,6 @@ from glob import glob
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn import decomposition
-from sklearn.metrics.pairwise import euclidean_distances
 
 def file2list(filename):
     with open(filename, 'r') as f:
