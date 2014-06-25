@@ -11,11 +11,11 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.neighbors import NearestNeighbors
 
-
-SOURCE_DIR = './immidata/modata/93chosun_stop/*.*'
-TOPIC_FILE = './immidata/modata/93chosun_stop_t3/t3.txt'
-ORI_DIR  = './immidata/endata/93chosun/'
-TARGET_DIR = './immidata/modata/93chosun_stop_t3/'
+TOPIC = 't7'
+SOURCE_DIR = './immidata/modata/93han/*.*'
+TOPIC_FILE = './immidata/modata/93han_'+TOPIC+'/'+TOPIC+'.txt'
+ORI_DIR  = './immidata/endata/93han/'
+TARGET_DIR = './immidata/modata/93han_'+TOPIC+'/'
 
 def read_file(filename, readline=False):
     with open(filename, 'r') as f:

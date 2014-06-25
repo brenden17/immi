@@ -10,7 +10,7 @@ def file2list(filename):
     return rawdata
 
 def init_data():
-    target = './immidata/modata/93chosun_stop/*.txt'
+    target = './immidata/modata/93han/*.txt'
     files = glob(target)
     return map(file2list, files)
 
@@ -21,7 +21,7 @@ def decompose_by_nmf(debug=True):
     counts = vectorizer.fit_transform(initdata)
     tfidf =  TfidfTransformer().fit_transform(counts)
 
-    for i in range(2, 7):
+    for i in range(2, 10):
         nmf = decomposition.NMF(n_components=i).fit(tfidf)
         feature_names = vectorizer.get_feature_names()
 
